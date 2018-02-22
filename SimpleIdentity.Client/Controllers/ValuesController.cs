@@ -14,6 +14,7 @@ namespace SimpleIdentity.Client.Controllers
         [Authorize]
         public IEnumerable<string> Get()
         {
+            Request.GetOwinContext().Authentication.SignOut();
             return ((User as ClaimsPrincipal).Claims).Select(x => x.Value);
         }
 

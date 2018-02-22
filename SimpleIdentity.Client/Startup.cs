@@ -22,8 +22,11 @@ namespace SimpleIdentity.Client
                 Authority = "http://localhost:8081/",
                 ClientId = "client",
                 ResponseType = "id_token",
+                Scope = "openid",
                 SignInAsAuthenticationType = "Cookies",
-                RedirectUri = "http://localhost:8082/"
+                RedirectUri = "http://localhost:8082/",
+                UseTokenLifetime = false,
+
             });
 
 

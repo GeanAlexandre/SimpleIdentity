@@ -11,9 +11,10 @@ namespace SimpleIdentity.Auth.Repository
                 Enabled = true,
                 ClientName = "Client",
                 ClientId = "client",
-                Flow = Flows.Implicit,
+                Flow = Flows.ResourceOwner,
                 AllowAccessToAllScopes = true,
-                RedirectUris = new List<string> { "http://localhost:8082/" }
+                RedirectUris = new List<string> { "http://localhost:8082/" },
+                PostLogoutRedirectUris = new List<string> { "http://localhost:8082/" },
             }
         };
     }

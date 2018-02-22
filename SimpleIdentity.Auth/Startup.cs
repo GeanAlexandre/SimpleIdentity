@@ -23,7 +23,11 @@ namespace SimpleIdentity.Auth
                 Factory = new IdentityServerServiceFactory()
                              .UseInMemoryUsers(Users.Get())
                              .UseInMemoryClients(Clients.Get())
-                             .UseInMemoryScopes(StandardScopes.All)
+                             .UseInMemoryScopes(Scopes.Get()),
+                AuthenticationOptions = new AuthenticationOptions
+                {
+                    EnablePostSignOutAutoRedirect = true
+                }
             });
 
         }
