@@ -10,16 +10,14 @@ namespace SimpleIdentity.Auth.Repository
         {
             var scopes = new List<Scope>
         {
-            new Scope
+                new Scope
             {
-                Enabled = true,
-                Name = "roles",
-                Type = ScopeType.Identity,
-                Claims = new List<ScopeClaim>
-                {
-                    new ScopeClaim("role")
-                }
-            }
+    Enabled = true,
+    DisplayName = "Sample API",
+    Name = "api",
+    Description = "Access to a sample API",
+    Type = ScopeType.Resource,
+}
         };
 
             scopes.AddRange(StandardScopes.All);

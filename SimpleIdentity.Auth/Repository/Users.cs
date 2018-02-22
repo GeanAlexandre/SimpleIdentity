@@ -18,11 +18,7 @@ namespace SimpleIdentity.Auth.Repository
                 Username = "gean",
                 Password = "alexandre",
                 Enabled = true,
-                Claims = new[]
-                {
-                    new Claim(Constants.ClaimTypes.GivenName, "Gean"),
-                    new Claim(Constants.ClaimTypes.FamilyName, "Alexandre")
-                }
+                
             }
         };
         }
